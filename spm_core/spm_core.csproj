@@ -1,0 +1,158 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{72BF5934-1C4A-48DB-8C84-001AA25BC41E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Spm_core</RootNamespace>
+    <AssemblyName>Spm_core</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="GraphLib, Version=1.0.0.1, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\GraphLib.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Cocomo.Cocomo.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Cocomo.CocomoII.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CocomoIIPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CocomoIIPanel.Designer.cs">
+      <DependentUpon>CocomoIIPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CocomoPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CocomoPanel.Designer.cs">
+      <DependentUpon>CocomoPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CyclomaticComplexityPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CyclomaticComplexityPanel.Designer.cs">
+      <DependentUpon>CyclomaticComplexityPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CylomaticComplexity.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Cocomo.DetailedResultSet.cs" />
+    <Compile Include="FunctionPoint.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="FunctionPointPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FunctionPointPanel.Designer.cs">
+      <DependentUpon>FunctionPointPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GraphViewer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GraphViewer.Designer.cs">
+      <DependentUpon>GraphViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Halstead.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="HalsteadPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="HalsteadPanel.Designer.cs">
+      <DependentUpon>HalsteadPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LinesOfCode.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="LinesOfCodePanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="LinesOfCodePanel.Designer.cs">
+      <DependentUpon>LinesOfCodePanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Cocomo.ResultSet.cs" />
+    <Compile Include="Putnam.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PutnamPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PutnamPanel.Designer.cs">
+      <DependentUpon>PutnamPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WalstonFelixSEL.cs">
+      <SubType>Component</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="CocomoIIPanel.resx">
+      <DependentUpon>CocomoIIPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CocomoPanel.resx">
+      <DependentUpon>CocomoPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CyclomaticComplexityPanel.resx">
+      <DependentUpon>CyclomaticComplexityPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FunctionPointPanel.resx">
+      <DependentUpon>FunctionPointPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GraphViewer.resx">
+      <DependentUpon>GraphViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HalsteadPanel.resx">
+      <DependentUpon>HalsteadPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LinesOfCodePanel.resx">
+      <DependentUpon>LinesOfCodePanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PutnamPanel.resx">
+      <DependentUpon>PutnamPanel.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
